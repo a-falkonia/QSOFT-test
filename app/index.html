@@ -5,13 +5,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="" rel="stylesheet" />
+  <link href="/css/style.min.css" rel="stylesheet" />
   <title>QSOFT test</title>
 </head>
 
 <body>
   <header class="page-header">
-    <div class="page-header__top">
+    <div class="container page-header__top">
       <a href="#">
         <img src="img/qsoft-logo.png" class="page-header__logo" width="136" height="31"
           alt="QSoft Logo">
@@ -33,11 +33,14 @@
       </div>
     </div>
     <div class="page-header__bottom">
-      <div class="page-header__search"></div>
+      <form action="/" method="GET" class="page-header__form page-header__form--mobile">
+        <img src="img/search-icon.svg" alt="Search" />
+        <input type="search" name="header-search" autocomplete="off" placeholder="Найти..." />
+      </form>
     </div>
   </header>
   <main class="page-main">
-    <section class="partners">
+    <section class="container partners">
       <h1 class="partners__title">Наши Партнеры</h1>
       <ul class="partners__list">
         <li class="partners__item">

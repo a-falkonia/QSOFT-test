@@ -8,7 +8,7 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var csso = require('gulp-csso');
 var rename = require('gulp-rename');
-var server = require("browser-sync").create();
+var server = require('browser-sync').create();
 
 gulp.task('scss', function () {
   return gulp
@@ -29,9 +29,11 @@ gulp.task('html', function () {
 });
 
 gulp.task('images', function () {
-  return gulp
-    .src('app/img/**/*.{png,jpg,svg}')
-    .pipe(gulp.dest('build/img'));
+  return gulp.src('app/img/**/*.{png,jpg,svg}').pipe(gulp.dest('build/img'));
+});
+
+gulp.task('fonts', function () {
+  return gulp.src('app/fonts/**/*.{ttf}').pipe(gulp.dest('build/fonts'));
 });
 
 gulp.task('server', function () {
@@ -52,5 +54,5 @@ gulp.task('refresh', function (done) {
   done();
 });
 
-gulp.task('build', gulp.series('scss', 'html', 'images'));
+gulp.task('build', gulp.series('scss', 'html', 'images', 'fonts'));
 gulp.task('start', gulp.series('build', 'server'));
