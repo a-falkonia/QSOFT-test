@@ -33,12 +33,13 @@
   display: flex;
   input {
     width: 100%;
+    padding: 0px 0px 0px 5px;
     border: none;
     appearance: none;
+    outline:none;
     font-family: 'Roboto', 'Arial', sans-serif;
     font-style: normal;
     font-weight: normal;
-    padding: 0px 0px 0px 5px;
 
     &::-webkit-search-cancel-button {
       appearance: none;
