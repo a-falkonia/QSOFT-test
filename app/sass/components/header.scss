@@ -8,10 +8,12 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding-top: 16px;
+  padding-bottom: 12px;
 
-  @media (max-width: $mobile-max-width) {
-    padding-top: 16px;
-    padding-bottom: 12px;
+  @media (min-width: $tablet-min-width) {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 
