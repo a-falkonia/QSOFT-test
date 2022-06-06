@@ -1,8 +1,48 @@
 .partners {
-    padding-top: 48px;
+  padding-top: 48px;
+  padding-bottom: 73px;
 }
+
 .partners__title {
-    font-size: 28px;
-    line-height: 45px;
-    text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: $main-dark-blue;
+}
+
+.partners__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 0px;
+}
+
+.partners__item {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border: $light-gray 1px solid;
+  border-radius: 5px;
+  width: 335px;
+  height: 140px;
+
+  &:hover {
+    @include hover;
+    box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(164, 164, 164, 0.03);
+  }
+
+  a {
+    @include not-hover;
+  }
+}
+
+.partners__item:not(:first-child) {
+  margin-top: 20px;
+}
+
+.partners__link {
+  padding-top: 7px;
 }
