@@ -5,7 +5,6 @@
 
 .page-header__top {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding-top: 16px;
@@ -40,6 +39,10 @@
     font-style: normal;
     font-weight: normal;
     padding: 0px 0px 0px 5px;
+
+    &::-webkit-search-cancel-button {
+      appearance: none;
+    }
 
     &::placeholder {
       color: #bbc4d6;
@@ -98,4 +101,13 @@
   .page-header__bottom {
     display: none;
   }
+}
+
+@media (min-width: $desktop-min-width) {
+  .page-header__form--desktop {
+    margin: 0 60px;
+  }
+  .page-header__user-img {
+      padding-right: 2px;
+    }
 }
