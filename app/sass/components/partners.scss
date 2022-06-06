@@ -28,6 +28,7 @@
   border-radius: 5px;
   width: 335px;
   height: 140px;
+  margin-bottom: 20px;
 
   &:hover {
     @include hover;
@@ -39,10 +40,32 @@
   }
 }
 
-.partners__item:not(:first-child) {
-  margin-top: 20px;
-}
-
 .partners__link {
   padding-top: 7px;
+}
+
+@media (min-width: $tablet-min-width) {
+  .partners {
+  padding-top: 47px;
+  padding-bottom: 0;
+  }
+  .partners__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .partners__item {
+    width: 31.5%;
+    min-height: 120px;
+    height: auto;
+    margin-top: 0px;
+    margin-right: 20px;
+
+    @media (max-width: $desktop-min-width) {
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  
 }
