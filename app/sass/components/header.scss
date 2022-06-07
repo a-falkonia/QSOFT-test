@@ -7,8 +7,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 16px;
-  padding-bottom: 12px;
+  padding-top: 17px;
+  padding-bottom: 11px;
 
   @media (min-width: $tablet-min-width) {
     padding-top: 0px;
@@ -47,7 +47,7 @@
 
     &::placeholder {
       color: #bbc4d6;
-      letter-spacing: 0.035em;
+      letter-spacing: 0.03em;
     }
   }
 }
@@ -83,7 +83,7 @@
   .page-header__user--desktop {
     display:flex;
     min-height: 80px;
-    padding-left: 20px;
+    padding-left: 19px;
     border-left: 1px solid $light-gray;
 
     .page-header__user-name {
