@@ -9,6 +9,7 @@ var autoprefixer = require('autoprefixer');
 var csso = require('gulp-csso');
 var rename = require('gulp-rename');
 var server = require('browser-sync').create();
+var ghPages = require('gulp-gh-pages');
 
 gulp.task('scss', function () {
   return gulp
@@ -52,6 +53,9 @@ gulp.task('server', function () {
 gulp.task('refresh', function (done) {
   server.reload();
   done();
+});
+gulp.task('deploy', function () {
+  return gulp.src('./build/**/*').pipe(ghPages());
 });
 
 gulp.task('build', gulp.series('scss', 'html', 'images', 'fonts'));
